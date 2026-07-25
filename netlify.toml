@@ -1,0 +1,14 @@
+# Netlify Configuration File
+
+[build]
+  command = "# This is a static website, no build required"
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+# Form handling
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
