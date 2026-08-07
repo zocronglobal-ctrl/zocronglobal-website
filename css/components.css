@@ -1,0 +1,552 @@
+/* Shared component styles migrated from customers.css - used across site */
+
+.stats-section,
+.trusted-clients,
+.testimonials-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.stat-card,
+.client-card,
+.testimonial-card {
+    background-color: var(--color-white);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover,
+.client-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .stat-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-medium-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.stat-card .stat-value {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--color-orange);
+    line-height: 1;
+}
+
+.client-card {
+    /* Square client cards: centered logo with company name below */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: var(--spacing-md);
+    aspect-ratio: 1 / 1; /* keeps equal width & height */
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    text-align: center;
+}
+
+.logo-frame {
+    /* Larger logo container while preserving centered logos */
+    width: 300px;
+    height: 250px;
+    border-radius: 4px;
+    background-color: var(--color-light-gray);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.country-flag {
+    width: 22px;
+    height: auto;
+    margin-left: 6px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+.country-SL-flag {
+    width: 26px;
+    height: auto;
+    margin-left: 6px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+.logo-frame img {
+    /* Increase logo display size; keep aspect ratio and prevent distortion */
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.company-name {
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+.quote-icon {
+    font-size: 1.25rem;
+    color: var(--color-orange);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+}
+
+.testimonial-card blockquote {
+    font-size: 1rem;
+    color: var(--color-dark-gray);
+    margin-bottom: 1.75rem;
+    line-height: 1.8;
+}
+
+.testimonial-meta .testimonial-name {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-meta .testimonial-role,
+.testimonial-meta .testimonial-company {
+    color: var(--color-medium-gray);
+    font-size: 0.95rem;
+}
+
+.testimonial-company-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background-color: rgba(11, 95, 165, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonial-company-logo img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+/* Alignment and sizing fixes */
+/* Statistics cards: identical size, padding, centered numbers */
+.stats-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-card {
+    /* Square statistic cards: width controls height for consistent squares */
+    aspect-ratio: 1 / 1;
+    min-height: 160px;
+    padding: var(--spacing-md);
+    border-radius: 4px; /* small radius for square appearance */
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.stat-card .stat-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Company logo cards: fixed square cards, centered name */
+.clients-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .clients-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Customers page specific layout overrides (only affects body.customers-page) */
+body.customers-page .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    body.customers-page .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    /* desktop: 4 columns so 7 items appear as 4 + 3 */
+    body.customers-page .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Testimonials layout: ensure seventh card centers on its own row on desktop */
+body.customers-page .testimonials-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+    body.customers-page .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    body.customers-page .testimonials-grid .testimonial-card:nth-child(7) {
+        grid-column: 2 / 3;
+        justify-self: center;
+        max-width: 420px;
+    }
+}
+
+.client-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo-frame {
+    width: 300px;
+    height: 250px;
+    border-radius: 4px;
+}
+
+.company-name {
+    font-weight: 700;
+    color: var(--color-dark-gray);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Testimonials: equal height cards using flexbox and bottom accent strip */
+.testimonials-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* stronger hover for client and stat cards while preserving testimonial hover */
+.stat-card:hover,
+.client-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
+}
+
+/* Founder card sizing and centering for About page */
+.leadership-section .founder-card {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+}
+
+.leadership-section .founder-card-inner {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing-lg) * 2);
+    width: 100%;
+}
+
+.leadership-section .founder-card .founder-photo-frame {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--color-white);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.14);
+    flex-shrink: 0;
+    transform: translateX(-10px);
+}
+
+.leadership-section .founder-card .founder-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.leadership-section .founder-card .founder-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    min-width: 0;
+}
+
+.leadership-section .founder-card .founder-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.leadership-section .founder-card .founder-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    background-color: rgba(255, 149, 0, 0.12);
+    color: var(--color-orange);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    line-height: 1.2;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .leadership-section .founder-card {
+        width: 90%;
+        padding: calc(var(--spacing-md) * 1.5);
+    }
+
+    .leadership-section .founder-card .founder-photo-frame {
+        width: 190px;
+        height: 190px;
+        transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .leadership-section .founder-card {
+        width: 100%;
+        padding: var(--spacing-md);
+        align-items: center;
+    }
+
+    .leadership-section .founder-card-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leadership-section .founder-card .founder-content {
+        align-items: center;
+    }
+
+    .leadership-section .founder-card .founder-badges {
+        justify-content: center;
+    }
+
+    .leadership-section .founder-card .founder-photo-frame {
+        width: 170px;
+        height: 170px;
+        margin-bottom: var(--spacing-md);
+        transform: none;
+    }
+}
+
+body.about-page .container {
+    max-width: 1200px;
+    padding: 0 24px;
+}
+
+body.about-page .stats-section,
+body.about-page .leadership-section,
+body.about-page .team-section,
+body.about-page .about-content {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+
+body.about-page .leadership-section .container,
+body.about-page .team-section .container,
+body.about-page .about-content .container {
+    max-width: 1200px;
+}
+
+body.about-page .about-content .about-section {
+    margin-bottom: 1.25rem;
+}
+
+body.about-page .about-content .about-section:last-child {
+    margin-bottom: 0;
+}
+
+body.about-page .team-section .container {
+    max-width: 1200px;
+}
+
+.team-section .team-description {
+    max-width: 840px;
+    margin: 0 auto 2rem;
+    padding: 0;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.team-member {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.team-member img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
+    border: 4px solid var(--color-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+}
+
+.team-member h3 {
+    margin-bottom: 0.35rem;
+    color: var(--color-black);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.team-member .team-role {
+    margin: 0;
+    color: var(--color-orange);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+.testimonial-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: var(--color-orange);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.testimonial-meta {
+    margin-top: 1rem;
+}
+
+/* Ensure headings align with left edge of cards */
+.stats-section h2,
+.trusted-clients h2,
+.testimonials-section h2 {
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+/* Keep vertical rhythm consistent */
+.stats-section,
+.trusted-clients,
+.testimonials-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+/* Page-specific grids (do not override global layout selectors) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: stretch;
+}
+
+.clients-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .clients-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

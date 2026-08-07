@@ -6,8 +6,10 @@
     <title>About Us - ZocronGlobal Technologies</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="about-page">
     <!-- Header Navigation -->
     <header class="header">
         <div class="container">
@@ -27,59 +29,165 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-up">
         <div class="container">
             <h1>About Us</h1>
             <p>Learn more about ZocronGlobal Technologies</p>
         </div>
     </section>
 
-    <!-- About Content -->
-    <section class="about-content">
+    <!-- Company Highlights -->
+    <section class="stats-section" data-aos="fade-up">
         <div class="container">
-            <div class="about-section">
+            <div data-aos="fade-up">
+                <h2>Company Highlights</h2>
+            </div>
+            <div class="services-grid stats-grid" data-aos="fade-up">
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="50">
+                    <div class="stat-title">Happy Clients</div>
+                    <div class="stat-value"><span class="counter" data-target="25">0</span>+</div>
+                </div>
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-title">Projects Delivered</div>
+                    <div class="stat-value"><span class="counter" data-target="40">0</span>+</div>
+                </div>
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="150">
+                    <div class="stat-title">Years Experience</div>
+                    <div class="stat-value"><span class="counter" data-target="10">0</span>+</div>
+                </div>
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-title">Client Satisfaction</div>
+                    <div class="stat-value"><span class="counter" data-target="100">0</span>%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Founder & CEO -->
+    <section class="leadership-section" data-aos="fade-up">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2>Meet Our Founder &amp; CEO</h2>
+                <p class="text-muted">A brief introduction to the leader guiding ZocronGlobal Technologies.</p>
+            </div>
+            <div class="services-grid leadership-grid" data-aos="fade-up">
+                <div class="testimonial-card founder-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="founder-card-inner">
+                        <div class="founder-photo-frame">
+                            <img src="images/founder-rabija.png" alt="M. V. Rabija" loading="lazy" class="founder-photo">
+                        </div>
+                        <div class="founder-content">
+                            <div>
+                                <h3>M. V. Rabija</h3>
+                                <div class="testimonial-role">Founder &amp; CEO</div>
+                                <p class="text-muted">M. V. Rabija brings visionary leadership and a deep commitment to delivering practical, high-quality technology solutions. Under her guidance, ZocronGlobal focuses on business automation, reliable integrations, and measurable outcomes for clients.</p>
+                            </div>
+                            <div class="founder-badges">
+                                <span class="founder-badge">✔ Founder of ZocronGlobal Technologies LLP</span>
+                                <span class="founder-badge">✔ Zoho Business Automation Specialist</span>
+                                <span class="founder-badge">✔ Driving Digital Transformation for Businesses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="team-section" data-aos="fade-up">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2>Meet Our Team</h2>
+                <p class="team-description text-muted">Our dedicated technology team combines technical depth and practical experience to deliver solutions that drive measurable outcomes for our clients.</p>
+            </div>
+            <div class="team-grid" data-aos="fade-up" data-aos-delay="50">
+                <div class="team-member">
+                    <img src="images/team/person1.png" alt="Person Name" loading="lazy">
+                    <h3>Chinna Samy C</h3>
+                    <p class="team-role">Project Management</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team/person2.jpeg" alt="Person Name" loading="lazy">
+                    <h3>Raj Kumar P</h3>
+                    <p class="team-role">Project Management
+                </div>
+                <div class="team-member">
+                    <img src="images/team/person3.png" alt="Person Name" loading="lazy">
+                    <h3>Kaliappan A</h3>
+                    <p class="team-role">Design Management
+                </div>
+                <div class="team-member">
+                    <img src="images/team/person4.png" alt="Person Name" loading="lazy">
+                    <h3>Muthu Krishnan T</h3>
+                    <p class="team-role">Testing & Quality Assurance</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team/person5.png" alt="Person Name" loading="lazy">
+                    <h3>Manoj Kumar K</h3>
+                    <p class="team-role">Developement Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content" data-aos="fade-up">
+        <div class="container">
+            <div class="about-section feature" data-aos="fade-up" data-aos-delay="50">
                 <h2>Who We Are</h2>
                 <p>ZocronGlobal Technologies LLP is a dedicated technology solutions provider committed to helping businesses modernize their operations and achieve sustainable growth through innovative technology implementations.</p>
             </div>
 
-            <div class="about-section">
+            <div class="about-section feature" data-aos="fade-up" data-aos-delay="100">
                 <h2>Our Mission</h2>
                 <p>To provide practical, cost-effective technology solutions that streamline business processes, enhance productivity, and drive measurable results for our clients.</p>
             </div>
 
-            <div class="about-section">
+            <div class="about-section feature" data-aos="fade-up" data-aos-delay="150">
                 <h2>What We Do</h2>
                 <p>We specialize in comprehensive technology services designed to transform how businesses operate:</p>
-                <ul class="about-list">
-                    <li><strong>Zoho Solutions:</strong> Expert implementation and customization of Zoho CRM, Creator, Books, and Inventory systems.</li>
-                    <li><strong>Business Automation:</strong> Strategic process automation that eliminates manual work and improves efficiency.</li>
-                    <li><strong>API Integration:</strong> Seamless integration of business applications to create unified technology ecosystems.</li>
-                    <li><strong>Custom Software Development:</strong> Bespoke applications built to address your specific business challenges.</li>
-                    <li><strong>Web Application Development:</strong> Modern, responsive web solutions for your business needs.</li>
-                </ul>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>Zoho Solutions</h3>
+                        <p>Expert implementation and customization of Zoho CRM, Creator, Books, and Inventory systems.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Business Automation</h3>
+                        <p>Strategic process automation that eliminates manual work and improves efficiency.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>API Integration</h3>
+                        <p>Seamless integration of business applications to create unified technology ecosystems.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Custom Software & Web Development</h3>
+                        <p>Bespoke applications and modern responsive web solutions built to address your specific business challenges.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="about-section">
+            <div class="about-section feature" data-aos="fade-up" data-aos-delay="200">
                 <h2>Our Approach</h2>
                 <p>We believe in understanding your business first. Rather than pushing generic solutions, we take time to understand your challenges, goals, and workflows. This allows us to recommend practical solutions that deliver real value to your organization.</p>
             </div>
 
-            <div class="about-section">
+            <div class="about-section feature" data-aos="fade-up" data-aos-delay="250">
                 <h2>Why Partner With Us</h2>
                 <div class="why-list">
-                    <div class="why-item">
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="50">
                         <h3>Deep Expertise</h3>
                         <p>Years of experience implementing and customizing Zoho and other business technology solutions.</p>
                     </div>
-                    <div class="why-item">
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="100">
                         <h3>Client-Focused</h3>
                         <p>We prioritize your success and maintain strong partnerships throughout implementation and beyond.</p>
                     </div>
-                    <div class="why-item">
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="150">
                         <h3>Practical Solutions</h3>
                         <p>We focus on real-world solutions that fit your business needs and budget.</p>
                     </div>
-                    <div class="why-item">
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="200">
                         <h3>Ongoing Support</h3>
                         <p>Dedicated support and maintenance ensure your systems continue to deliver value.</p>
                     </div>
@@ -99,10 +207,10 @@
                         <a href="https://facebook.example.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.1c0-2.2 1.3-3.4 3.3-3.4.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.3l-.4 2.9h-1.9v7A10 10 0 0022 12z"/></svg>
                         </a>
-                        <a href="https://instagram.example.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/zocronglobal/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.8a4.2 4.2 0 100 8.4 4.2 4.2 0 000-8.4zm5.2-.9a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg>
                         </a>
-                        <a href="https://linkedin.example.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/zocronglobal-technologies/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-.9 1.7-1.8 3.5-1.8C20.6 8.9 21 11 21 14.2V21H17v-6.1c0-1.5-.1-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9V9z"/></svg>
                         </a>
                     </div>
@@ -110,5 +218,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script src="js/customers.js"></script>
 </body>
 </html>
