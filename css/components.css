@@ -536,14 +536,12 @@ body.about-page .team-section .container {
 @media (max-width: 480px) {
   .clients-grid {
    /* grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr; /* single column */
     justify-items: center;
-    display: grid;
-    gap: var(--spacing-lg);
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
   .client-card {
     width: 90%;
-    max-width: 220px;
+   /* max-width: 220px;*/
   }
 }
 
@@ -551,20 +549,16 @@ body.about-page .team-section .container {
 @media (min-width: 768px) {
     .clients-grid {
        /* grid-template-columns: repeat(3, 1fr);*/
-       justify-items: center;
-    display: grid;
-    gap: var(--spacing-lg);
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+       grid-template-columns: 1fr; /* single column */
+    justify-items: center;
     }
 }
 
 @media (min-width: 1200px) {
     .clients-grid {
        /* grid-template-columns: repeat(5, 1fr); */
-       justify-items: center;
-    display: grid;
-    gap: var(--spacing-lg);
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+       grid-template-columns: 1fr; /* single column */
+    justify-items: center;
     }
 }
 
